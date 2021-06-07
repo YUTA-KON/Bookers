@@ -13,14 +13,14 @@
             <%= link_to "Show", book_path(b) %>
             </td>
             <td><%= link_to "Edit", edit_book_path(b) %></td>
-            <td><%= link_to "Delete", book_path(b), method: :delete %></td>
+            <td><%= link_to "Destroy", book_path(b), method: :delete %></td>
         </tr>
     <% end %>
 </table>
 
 <h1>New Book</h1>
 <% if @newbook.errors.any? %>
-    <h2><%= @newbook.errors.count %>件のエラーが発生しました</h2>
+    <h2><%= @newbook.errors.count %>件のerrorが発生しました</h2>
     <ul>
         <%= @newbook.errors.full_messages.each do |message| %>
             <li><%= message %></li>
