@@ -1,0 +1,15 @@
+<% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+<% end -%>
+
+<div>
+    <strong>Title: </strong><%= @book.title %>
+</div>
+<div>
+    <strong>Body: </strong><%= @book.body %>
+</div>
+<div>
+    <%= link_to "Edit", edit_book_path(@book.id) %>
+    |
+    <%= link_to "Back", books_path %>
+</div>
